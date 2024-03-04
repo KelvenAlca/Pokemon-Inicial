@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleção de Pokémon Inicial</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #838383;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .btn-bulba {
+      background-color: #77dd77;
+      border-color: #77dd77;
+      width: 100%;
+    }
+
+    .btn-char {
+      background-color: #ff6961;
+      border-color: #ff6961;
+      width: 100%;
+    }
+
+    .btn-squirt {
+      background-color: #aad4e5;
+      border-color: #aad4e5;
+      width: 100%;
+    }
+
+    #message {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #703072;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-4">ESCOLHA SEU POKÉMON INICIAL</h1>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card bg-light">
+          <img src="Bulba.png" class="card-img-top" alt="Bulbasaur">
+          <div class="card-body">
+            <h5 class="card-title">Bulbasaur</h5>
+            <button class="btn btn-bulba" onclick="selectPokemon('Bulbasaur')">Eu Escolho Você!</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-light">
+          <img src="Char.png" class="card-img-top" alt="Charmander">
+          <div class="card-body">
+            <h5 class="card-title">Charmander</h5>
+            <button class="btn btn-char" onclick="selectPokemon('Charmander')">Eu Escolho Você!</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-light">
+          <img src="Turtle.png" class="card-img-top" alt="Squirtle">
+          <div class="card-body">
+            <h5 class="card-title">Squirtle</h5>
+            <button class="btn btn-squirt" onclick="selectPokemon('Squirtle')">Eu Escolho Você!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="message" class="mt-4"></div>
+  </div>
+
+  <script>
+    function selectPokemon(pokemon) {
+      document.getElementById('message').innerHTML = `Você escolheu ${pokemon} como seu Pokémon inicial!`;
+    }
+  </script>
+</body>
+</html>
